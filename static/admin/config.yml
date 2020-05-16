@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: portfolio
+  repo: GuOshiro/portfolio
   branch: master
   site_domain: guoshiro.io
 

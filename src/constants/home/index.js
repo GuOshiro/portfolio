@@ -1,4 +1,4 @@
-export const menuItems = ["services", "midia", "portfolio", "blog", "jobs"]
+export const menuItems = ["about", "portfolio", "blog", "contact"]
 
 export const homeContent = {
   card: [

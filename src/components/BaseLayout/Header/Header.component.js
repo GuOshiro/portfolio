@@ -28,12 +28,6 @@ const Header = () => {
       >
         <Link to="/"></Link>
         <Menu />
-        <Box flex={1} display={["none", "none", "inline"]}>
-          <Flex justifyContent="flex-end" alignItems="center">
-            <Button onClick={goToContact} variant="outlined" mr={3}></Button>
-            <Button onClick={goToContact}></Button>
-          </Flex>
-        </Box>
         <MenuMobile show={showMobileMenu} toggle={toggleMobileMenu} />
       </WidthLimitation>
     </Wrapper>

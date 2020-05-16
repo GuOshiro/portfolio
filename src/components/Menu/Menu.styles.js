@@ -49,7 +49,7 @@ export const MenuItem = ({ children }) => (
     sx={{
       a: {
         background: "transparent",
-        color: "white",
+        color: "gray",
         cursor: "poiter",
         textDecoration: "none",
         "&.active": {

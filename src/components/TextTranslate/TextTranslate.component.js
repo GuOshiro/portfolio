@@ -1,5 +1,6 @@
 import React from "react"
 import { Text } from "rebass"
+import { FormattedMessage } from "gatsby-plugin-intl"
 
 export const TextTranslate = ({ id, as, ...props }) => {
   const defaultProps = { fontFamily: "heading", ...props }
@@ -54,7 +55,11 @@ export const TextTranslate = ({ id, as, ...props }) => {
         return { ...defaultProps }
     }
   }
-  return <Text as={as} sx={{ ...textProps() }}></Text>
+  return (
+    <Text as={as} sx={{ ...textProps() }}>
+      <FormattedMessage id={id} {...props} />
+    </Text>
+  )
 }
 
 export default TextTranslate

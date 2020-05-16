@@ -8,6 +8,8 @@ import { menuItems } from "@constants/home"
 import { useToggleLocale } from "@utils/hooks/useToggleLocale"
 // Styles
 import { Wrapper, MenuItemsWrapper, MenuItem } from "./Menu.styles"
+// Components
+import TextTranslate from "@components/TextTranslate"
 
 const Menu = ({ show }) => {
   const { toggleLocale } = useToggleLocale()
@@ -16,11 +18,13 @@ const Menu = ({ show }) => {
       <MenuItemsWrapper>
         {menuItems.map((item, index) => (
           <MenuItem key={index}>
-            <Link activeClassName="active" to={`/${item}`}></Link>
+            <Link activeClassName="active" to={`/${item}`}>
+              <TextTranslate as="span" id={item} />
+            </Link>
           </MenuItem>
         ))}
         <MenuItem>
-          <Button variant="link" type="button" onClick={toggleLocale}></Button>
+          <TextTranslate as="a" onClick={() => toggleLocale()} id="as" />
         </MenuItem>
       </MenuItemsWrapper>
     </Wrapper>
