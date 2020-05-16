@@ -1,0 +1,51 @@
+backend:
+  name: github
+  repo: portfolio
+  branch: master
+  site_domain: guoshiro.io
+
+publish_mode: editorial_workflow
+media_folder: "static/assets/img"
+public_folder: "assets/img"
+
+collections:
+  - name: "posts"
+    label: "Posts"
+    folder: "posts"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - { label: "Título", name: "title", widget: "string" }
+      - { label: "Descrição", name: "description", widget: "string" }
+      - {
+          label: "Data",
+          name: "date",
+          widget: "datetime",
+          format: "YYYY-MM-DD hh:mm:ss",
+        }
+      - { label: "Imagem", name: "image", widget: "image" }
+      - { label: "Categoria", name: "category", widget: "string" }
+      - { label: "Texto", name: "body", widget: "markdown" }
+  - name: "midia"
+    label: "Midias"
+    folder: "midia"
+    create: true
+    fields:
+      - { label: "Título", name: "title", widget: "string" }
+      - { label: "Descrição", name: "description", widget: "string" }
+      - { label: "Imagem", name: "image", widget: "image" }
+      - { label: "Url", name: "url", widget: "string" }
+  - name: "portfolio"
+    label: "Portfolio"
+    folder: "portfolio"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - { label: "Empresa", name: "company", widget: "string" }
+      - { label: "Descrição", name: "description", widget: "string" }
+      - { label: "Nome do Cliente", name: "clientName", widget: "string" }
+      - { label: "Cargo do Cliente", name: "clientPosition", widget: "string" }
+      - { label: "Imagem", name: "image", widget: "image" }
+      - { label: "Logo", name: "logo", widget: "image" }
+      - { label: "Cor Primaria", name: "primaryColor", widget: "string" }
+      - { label: "Cor Secundaria", name: "secondaryColor", widget: "string" }
