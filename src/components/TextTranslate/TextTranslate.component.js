@@ -2,69 +2,99 @@ import React from "react"
 import { Text } from "rebass"
 import { FormattedMessage } from "gatsby-plugin-intl"
 
-export const TextTranslate = ({ id, as, ...props }) => {
+export const TextTranslate = ({ id, as, children, href = "", ...props }) => {
   const defaultProps = {
+    color: "blueNavy",
     fontFamily: "heading",
     "::selection": {
-      background: "blueNavy",
+      backgroundColor: "orange",
       color: "white",
     },
-    ...props,
   }
   const textProps = () => {
     switch (as) {
+      case "h1":
+        return {
+          ...defaultProps,
+          fontWeight: "body",
+          fontSize: 6,
+          fontFamily: "heading",
+          lineHeight: "1.5",
+          ...props,
+        }
       case "h2":
         return {
-          color: "white",
+          ...defaultProps,
           fontWeight: "body",
           fontSize: 6,
           fontFamily: "heading",
           lineHeight: "1.06",
-          ...defaultProps,
+          ...props,
         }
       case "h3":
         return {
+          ...defaultProps,
           fontHeight: "28px",
           fontSize: "32px",
           fontWeight: "body",
           letterSpacing: "0px",
           color: "blueNavy",
-          ...defaultProps,
+          ...props,
         }
       case "h4":
         return {
+          ...defaultProps,
           fontHeight: "25px",
           fontSize: "25px",
           fontWeight: "body",
           letterSpacing: "0px",
           color: "blueNavy",
+          ...props,
+        }
+      case "h5":
+        return {
           ...defaultProps,
+          fontSize: "25px",
+          fontWeight: "thin",
+          lineHeight: "2",
+          letterSpacing: "0px",
+          color: "blueNavy",
+          ...props,
         }
       case "h6":
         return {
+          ...defaultProps,
           fontHeight: "16px",
           fontSize: "20px",
           fontWeight: "body",
           letterSpacing: "0px",
           color: "blueNavy",
+          ...props,
+        }
+      case "a":
+        return {
           ...defaultProps,
+          color: "orange",
+          fontWeight: "light",
+          ...props,
         }
       case "p":
         return {
+          ...defaultProps,
           fontHeight: "19px",
           fontSize: "16px",
           fontWeight: "light",
           letterSpacing: "0px",
-          color: "blueNavy",
-          ...defaultProps,
+          ...props,
         }
       default:
         return { ...defaultProps }
     }
   }
+
   return (
-    <Text as={as} sx={{ ...textProps() }}>
-      <FormattedMessage id={id} {...props} />
+    <Text as={as} href={href} sx={{ ...textProps() }}>
+      {children ? children : <FormattedMessage id={id} {...props} />}
     </Text>
   )
 }

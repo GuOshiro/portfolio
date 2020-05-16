@@ -1,17 +1,18 @@
 const breakpoints = ["40em", "56em", "64em"]
 const colors = {
   background: "#fff",
-  blue: "#00346B",
+  blue: "#4A90E2",
   blueNavy: "#0e0b5b",
   blueNavyLight: "#243e76",
   darkSecondary: "#ed4c5b",
   gray: "#212121",
   grayLight: "#f7f7f7",
+  heading: "#0e0b5b",
   muted: "#f6f6f6",
+  orange: "#F5A623",
   primary: "#00346B",
   secondary: "#f17b36",
   text: "#555",
-  heading: "#0e0b5b",
 }
 const fonts = {
   body: "Lato, sans-serif",

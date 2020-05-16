@@ -1,1 +1,13 @@
-{}
+
+{
+    "home":{
+        "cover":{
+            "title-1": "Olá, sou desenvolvedor de software.",
+            "title-2": "Posso te ajudar resolver seus problemas, blz?",
+            "subtitle-1": "Eu construo, crio e faço manutenção de aplicações.",
+            "subtitle-2": "Tem algum projeto, ideia ou problema que queira ajuda?", 
+            "subtitle-3": "Me mande um email" 
+        }
+    }
+}
+

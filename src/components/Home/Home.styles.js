@@ -5,8 +5,12 @@ import React from "react"
 import { Flex, Heading, Text } from "rebass"
 
 export const Section = ({ title, children, backgroundColor }) => (
-  <Flex backgroundColor={backgroundColor} width="100vw">
-    <WidthLimitation marginY="5" marginX="auto" >
+  <Flex
+    backgroundColor={backgroundColor}
+    width="100vw"
+    sx={{ mt: ["0", "20%"] }}
+  >
+    <WidthLimitation marginY="5" marginX="auto">
       <Flex
         as="section"
         flexWrap="wrap"
@@ -18,7 +22,7 @@ export const Section = ({ title, children, backgroundColor }) => (
         {children}
       </Flex>
     </WidthLimitation>
-  </Flex >
+  </Flex>
 )
 
 export const Link = props => (

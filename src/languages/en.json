@@ -1,1 +1,11 @@
-{}
+{
+    "home":{
+        "cover":{
+            "title-1": "Hey, I'm a software developer.",
+            "title-2": "I can solve all some one of your problems, ok?",
+            "subtitle-1": "I design, build & sometimes rescue applications.",   
+            "subtitle-2": "Have a project, idea or problem you'd like to discuss?",   
+            "subtitle-3": "Let's chat" 
+        }
+    }
+}
