@@ -47,6 +47,12 @@ export const MenuItem = ({ children }) => (
   <Box
     display={["block", "block", "inline"]}
     sx={{
+      button: {
+        color: "gray",
+        span: {
+          color: "gray",
+        },
+      },
       a: {
         background: "transparent",
         color: "gray",

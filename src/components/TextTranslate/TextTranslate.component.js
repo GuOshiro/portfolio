@@ -3,7 +3,14 @@ import { Text } from "rebass"
 import { FormattedMessage } from "gatsby-plugin-intl"
 
 export const TextTranslate = ({ id, as, ...props }) => {
-  const defaultProps = { fontFamily: "heading", ...props }
+  const defaultProps = {
+    fontFamily: "heading",
+    "::selection": {
+      background: "blueNavy",
+      color: "white",
+    },
+    ...props,
+  }
   const textProps = () => {
     switch (as) {
       case "h2":
