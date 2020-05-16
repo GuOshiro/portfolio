@@ -18,7 +18,7 @@ function BlogList({ data, pageContext }) {
 export const query = graphql`
   query BlogList($skip: Int!, $limit: Int!) {
     allMarkdownRemark(
-      filter: { fileAbsolutePath: { glob: "**/posts/*.md" } }
+      filter: { fileAbsolutePath: { glob: "**/api/posts/*.md" } }
       sort: { fields: frontmatter___date, order: DESC }
       limit: $limit
       skip: $skip

@@ -9,7 +9,7 @@ function LatestPosts() {
   } = useStaticQuery(graphql`
     query LatestPosts {
       allMarkdownRemark(
-        filter: { fileAbsolutePath: { glob: "**/posts/*.md" } }
+        filter: { fileAbsolutePath: { glob: "**/api/posts/*.md" } }
         sort: { fields: frontmatter___date, order: DESC }
         limit: 5
       ) {

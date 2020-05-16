@@ -11,7 +11,7 @@ public_folder: "assets/img"
 collections:
   - name: "posts"
     label: "Posts"
-    folder: "posts"
+    folder: "api/posts"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
@@ -26,15 +26,6 @@ collections:
       - { label: "Imagem", name: "image", widget: "image" }
       - { label: "Categoria", name: "category", widget: "string" }
       - { label: "Texto", name: "body", widget: "markdown" }
-  - name: "midia"
-    label: "Midias"
-    folder: "midia"
-    create: true
-    fields:
-      - { label: "Título", name: "title", widget: "string" }
-      - { label: "Descrição", name: "description", widget: "string" }
-      - { label: "Imagem", name: "image", widget: "image" }
-      - { label: "Url", name: "url", widget: "string" }
   - name: "portfolio"
     label: "Portfolio"
     folder: "portfolio"
