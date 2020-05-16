@@ -1,5 +1,4 @@
 import PostItem from "@components/PostItem"
-import Translate from "@components/Translate"
 import { graphql, useStaticQuery } from "gatsby"
 import React from "react"
 import * as Style from "./LatestPosts.styles"
@@ -21,13 +20,6 @@ function LatestPosts() {
               date
               description
               title
-              image {
-                childImageSharp {
-                  fluid(maxWidth: 800) {
-                    ...GatsbyImageSharpFluid
-                  }
-                }
-              }
             }
             fields {
               slug
@@ -40,9 +32,7 @@ function LatestPosts() {
   `)
   return (
     <Style.Wrapper>
-      <Style.Title>
-        <Translate id="post.latestPosts" />
-      </Style.Title>
+      <Style.Title></Style.Title>
       <Style.PostsGrid>
         {posts.map(({ node }, index) => (
           <PostItem

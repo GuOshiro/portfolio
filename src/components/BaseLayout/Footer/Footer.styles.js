@@ -1,19 +1,21 @@
-import Content, { WidthLimitation } from "@components/Content"
 import React from "react"
 import { Box, Flex, Link, Text } from "rebass"
+// Components
+import Content, { WidthLimitation } from "@components/Content"
 
-export function Wrapper({ children }) {
+export const Wrapper = ({ children }) => {
   return (
     <Flex
-      bg="blue"
-      color="white"
-      fontFamily="body"
-      flexWrap="wrap"
       alignItems="center"
+      as="footer"
+      backgroundColor="gray"
+      color="white"
+      flexWrap="wrap"
+      fontFamily="body"
       justifyContent="center"
-      width="100%"
-      paddingY={5}
       paddingX={3}
+      paddingY={5}
+      width="100%"
       sx={{
         bottom: 0,
       }}
@@ -23,7 +25,7 @@ export function Wrapper({ children }) {
   )
 }
 
-export function MessageWrapper({ children, ...props }) {
+export const MessageWrapper = ({ children, ...props }) => {
   return (
     <Flex
       height="100%"
@@ -31,7 +33,7 @@ export function MessageWrapper({ children, ...props }) {
       padding="90px 0"
       textAlign="center"
       sx={{
-        backgroundColor: "blue",
+        backgroundColor: "gray",
         bottom: 0,
         ...props,
       }}
@@ -41,7 +43,7 @@ export function MessageWrapper({ children, ...props }) {
   )
 }
 
-export function FooterSection({ children, name, ...props }) {
+export const FooterSection = ({ children, name, ...props }) => {
   return (
     <Box as="section" className="section" lineHeight={1.5625} {...props}>
       {name && (
@@ -54,7 +56,7 @@ export function FooterSection({ children, name, ...props }) {
   )
 }
 
-export function FooterLineSection({ children }) {
+export const FooterLineSection = ({ children }) => {
   return (
     <Flex
       as="section"
@@ -78,7 +80,7 @@ export function FooterLineSection({ children }) {
   )
 }
 
-export function FooterLink({ children, ...props }) {
+export const FooterLink = ({ children, ...props }) => {
   return (
     <Link
       lineHeight={1.5625}
@@ -94,6 +96,6 @@ export function FooterLink({ children, ...props }) {
   )
 }
 
-export function Address({ children, ...props }) {
+export const Address = ({ children, ...props }) => {
   return <Text {...props}>{children}</Text>
 }

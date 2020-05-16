@@ -20,7 +20,6 @@ function BlogPost({ data }) {
         title={title}
         description={description}
         article
-        image={image?.publicURL}
       />
       <Post {...{ title, date, description, category, html, timeToRead }} />
     </BaseLayout>
@@ -34,9 +33,6 @@ export const query = graphql`
         title
         description
         date
-        image {
-          publicURL
-        }
         category
       }
       fields {

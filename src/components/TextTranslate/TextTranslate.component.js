@@ -1,8 +1,7 @@
-import Translate from "@components/Translate"
 import React from "react"
 import { Text } from "rebass"
 
-export function TextTranslate({ id, as, ...props }) {
+export const TextTranslate = ({ id, as, ...props }) => {
   const defaultProps = { fontFamily: "heading", ...props }
   const textProps = () => {
     switch (as) {
@@ -13,7 +12,7 @@ export function TextTranslate({ id, as, ...props }) {
           fontSize: 6,
           fontFamily: "heading",
           lineHeight: "1.06",
-          ...defaultProps
+          ...defaultProps,
         }
       case "h3":
         return {
@@ -55,11 +54,7 @@ export function TextTranslate({ id, as, ...props }) {
         return { ...defaultProps }
     }
   }
-  return (
-    <Text as={as} sx={{ ...textProps() }}>
-      <Translate id={id} />
-    </Text>
-  )
+  return <Text as={as} sx={{ ...textProps() }}></Text>
 }
 
 export default TextTranslate

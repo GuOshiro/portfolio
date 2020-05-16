@@ -6,11 +6,11 @@ const widthLimitationStyle = {
   width: "100%",
 }
 
-export function WidthLimitation({ children, ...props }) {
+export const WidthLimitation = ({ children, ...props }) => {
   return <Flex sx={{ ...widthLimitationStyle, ...props }}>{children}</Flex>
 }
 
-function Content({ children, sx, ...props }) {
+const Content = ({ children, sx, ...props }) => {
   return (
     <Flex
       sx={{ ...widthLimitationStyle, padding: "50px 20px", ...sx }}

@@ -2,7 +2,6 @@ import React from "react"
 import { FormattedDate } from "gatsby-plugin-intl"
 // Components
 import LatestPosts from "@components/LatestPosts"
-import Translate from "@components/Translate"
 // Styles
 import {
   Category,
@@ -28,15 +27,6 @@ const Post = ({ title, category, date, description, html, timeToRead }) => {
             value={date}
           />
         </Date>
-        <TimeToRead>
-          <Translate
-            id="post.readingMinutes"
-            values={{
-              timeToRead,
-            }}
-          />
-        </TimeToRead>
-        <Content mt={5} dangerouslySetInnerHTML={{ __html: html }} />
       </PostWrapper>
       <LatestPosts />
     </ContentWrapper>

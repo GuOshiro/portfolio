@@ -5,7 +5,7 @@ import React from "react"
 import { Box, Flex, Text } from "rebass"
 import { jsx } from "theme-ui"
 
-export function Category({ children }) {
+export const Category = ({ children }) => {
   return <Text variant="caps">{children}</Text>
 }
 

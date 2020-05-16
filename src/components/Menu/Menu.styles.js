@@ -1,7 +1,7 @@
 import React from "react"
 import { Box, Flex } from "rebass"
 
-export function Wrapper({ children, className }) {
+export const Wrapper = ({ children, className }) => {
   return (
     <Box
       sx={{
@@ -49,21 +49,19 @@ export const MenuItem = ({ children }) => (
     sx={{
       a: {
         background: "transparent",
-        cursor: "poiter",
         color: "white",
+        cursor: "poiter",
         textDecoration: "none",
-
         "&.active": {
           fontWeight: "bold",
         },
-
         "&:hover": {
           opacity: 0.8,
         },
       },
       "&:not(:first-of-type)": {
-        mt: [3, 3, 0],
         ml: [0, 0, 3],
+        mt: [3, 3, 0],
       },
     }}
     as="li"

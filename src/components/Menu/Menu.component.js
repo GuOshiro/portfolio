@@ -1,36 +1,29 @@
-import Translate from "@components/Translate"
-import { menuItems } from "@constants/home"
-import { useToggleLocale } from "@utils/hooks/useToggleLocale"
-import classNames from "classnames"
-import { Link } from "gatsby-plugin-intl"
 import React from "react"
+import { Link } from "gatsby-plugin-intl"
 import { Button } from "rebass"
-import * as Style from "./Menu.styles"
+import classNames from "classnames"
+// Constants
+import { menuItems } from "@constants/home"
+// Utils
+import { useToggleLocale } from "@utils/hooks/useToggleLocale"
+// Styles
+import { Wrapper, MenuItemsWrapper, MenuItem } from "./Menu.styles"
 
-function Menu({ show, isMobile = false }) {
+const Menu = ({ show }) => {
   const { toggleLocale } = useToggleLocale()
   return (
-    <Style.Wrapper
-      className={classNames({
-        isMobile,
-        show,
-      })}
-    >
-      <Style.MenuItemsWrapper>
+    <Wrapper className={classNames({ show })}>
+      <MenuItemsWrapper>
         {menuItems.map((item, index) => (
-          <Style.MenuItem key={index}>
-            <Link activeClassName="active" to={`/${item}`}>
-              <Translate id={`menu.${item}`} />
-            </Link>
-          </Style.MenuItem>
+          <MenuItem key={index}>
+            <Link activeClassName="active" to={`/${item}`}></Link>
+          </MenuItem>
         ))}
-        <Style.MenuItem>
-          <Button variant="link" type="button" onClick={toggleLocale}>
-            <Translate id="header.changeLocale" />
-          </Button>
-        </Style.MenuItem>
-      </Style.MenuItemsWrapper>
-    </Style.Wrapper>
+        <MenuItem>
+          <Button variant="link" type="button" onClick={toggleLocale}></Button>
+        </MenuItem>
+      </MenuItemsWrapper>
+    </Wrapper>
   )
 }
 

@@ -1,26 +1,28 @@
-import Menu from "@components/Menu/Menu.component"
-import classnames from "classnames"
-import React from "react"
+import React, { Fragment } from "react"
 import { Menu as MenuIcon, X } from "react-feather"
-import * as Style from "./MenuMobile.styles"
+import classnames from "classnames"
+// Components
+import Menu from "@components/Menu/Menu.component"
+// Styles
+import { Wrapper } from "./MenuMobile.styles"
 
 function MenuMobile({ show, toggle }) {
   return (
-    <>
+    <Fragment>
       {show ? (
-        <X className={"menu-icon"} onClick={toggle} />
+        <X className="menu-icon" onClick={toggle} />
       ) : (
-        <MenuIcon className={"menu-icon"} onClick={toggle} />
+        <MenuIcon className="menu-icon" onClick={toggle} />
       )}
-      <Style.Wrapper
+      <Wrapper
         className={classnames({
           show,
           hide: !show,
         })}
       >
-        <Menu isMobile show={show} />
-      </Style.Wrapper>
-    </>
+        <Menu show={show} />
+      </Wrapper>
+    </Fragment>
   )
 }
 

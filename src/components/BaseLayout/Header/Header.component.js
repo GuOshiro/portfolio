@@ -1,16 +1,17 @@
-import { WidthLimitation } from "@components/Content"
-import Logo from "@components/Logo"
-import Menu from "@components/Menu"
-import MenuMobile from "@components/MenuMobile"
-import Translate from "@components/Translate"
-import { useOnClickOutside } from "@utils/hooks/useOnClickOutside"
-import { useToggle } from "@utils/hooks/useToggle"
-import { Link, navigate } from "gatsby-plugin-intl"
 import React, { useRef } from "react"
 import { Box, Button, Flex } from "rebass"
-import * as Style from "./Header.styles"
+import { Link, navigate } from "gatsby-plugin-intl"
+// Components
+import { WidthLimitation } from "@components/Content"
+import Menu from "@components/Menu"
+import MenuMobile from "@components/MenuMobile"
+// Utils
+import { useOnClickOutside } from "@utils/hooks/useOnClickOutside"
+import { useToggle } from "@utils/hooks/useToggle"
+// Styles
+import { Wrapper } from "./Header.styles"
 
-function Header() {
+const Header = () => {
   const [showMobileMenu, toggleMobileMenu, hideMenu] = useToggle()
   const headerRef = useRef()
 
@@ -19,32 +20,23 @@ function Header() {
   const goToContact = () => navigate("/contact/")
 
   return (
-    <Style.Wrapper ref={headerRef}>
+    <Wrapper ref={headerRef}>
       <WidthLimitation
         alignItems="center"
         flexWrap="wrap"
         justifyContent="space-between"
       >
-        <Link to="/">
-          <Logo height="auto" width={"7.625em"} />
-        </Link>
-
+        <Link to="/"></Link>
         <Menu />
-
         <Box flex={1} display={["none", "none", "inline"]}>
           <Flex justifyContent="flex-end" alignItems="center">
-            <Button onClick={goToContact} variant="outlined" mr={3}>
-              <Translate id="header.buttons.hireSquad" />
-            </Button>
-            <Button onClick={goToContact}>
-              <Translate id="header.buttons.hireProject" />
-            </Button>
+            <Button onClick={goToContact} variant="outlined" mr={3}></Button>
+            <Button onClick={goToContact}></Button>
           </Flex>
         </Box>
-
         <MenuMobile show={showMobileMenu} toggle={toggleMobileMenu} />
       </WidthLimitation>
-    </Style.Wrapper>
+    </Wrapper>
   )
 }
 

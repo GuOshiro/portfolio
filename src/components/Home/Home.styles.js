@@ -37,7 +37,6 @@ export const SectionTitle = props => (
       fontSize: "25px",
       fontWeight: "body",
       letterSpacing: "0px",
-      color: "blueNavy",
       mb: 2,
 
       textDecoration: "none",
@@ -54,7 +53,6 @@ export const SectionSubtitle = props => (
       fontSize: "16px",
       fontWeight: "light",
       letterSpacing: "0px",
-      color: "blueNavy",
       mb: 2,
       fontFamily: "heading",
       width: "100%",

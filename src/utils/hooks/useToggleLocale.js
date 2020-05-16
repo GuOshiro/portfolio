@@ -1,7 +1,7 @@
 import { changeLocale, useIntl } from "gatsby-plugin-intl"
 import { useCallback } from "react"
 
-export function useToggleLocale() {
+export const useToggleLocale = () => {
   const { locale } = useIntl()
   const toggleLocale = useCallback(() => {
     changeLocale(locale === "en" ? "" : "en")

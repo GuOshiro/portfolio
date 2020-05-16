@@ -4,7 +4,6 @@ import PropTypes from "prop-types"
 import { navigate } from "gatsby-plugin-intl"
 // Components
 import { Button } from "rebass"
-import Translate from "@components/Translate"
 // Styles
 import { Wrapper, PageDisplayWrapper } from "./Pagination.styles"
 
@@ -22,23 +21,14 @@ const Pagination = ({
       <Button
         className={classnames({ invisible: isFirst })}
         onClick={goTo(prevPage)}
-      >
-        <Translate id="pagination.previousPage" />
-      </Button>
+      ></Button>
 
-      <PageDisplayWrapper>
-        <Translate
-          id="pagination.pageIndicator"
-          values={{ currentPage, total }}
-        />
-      </PageDisplayWrapper>
+      <PageDisplayWrapper></PageDisplayWrapper>
 
       <Button
         className={classnames({ invisible: isLast })}
         onClick={goTo(nextPage)}
-      >
-        <Translate id="pagination.nextPage" /> →
-      </Button>
+      ></Button>
     </Wrapper>
   )
 }
