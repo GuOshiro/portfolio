@@ -1,6 +1,6 @@
 export const menuItems = ["about", "portfolio", "blog", "contact"]
 
-export const homeContent = {
+export default {
   cover: {
     title1: { as: "h1", id: "home.cover.title-1" },
     title2: { as: "h1", id: "home.cover.title-2" },

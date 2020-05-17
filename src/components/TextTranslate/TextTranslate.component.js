@@ -17,7 +17,7 @@ export const TextTranslate = ({ id, as, children, href = "", ...props }) => {
         return {
           ...defaultProps,
           fontWeight: "body",
-          fontSize: 6,
+          fontSize: [5, 6],
           fontFamily: "heading",
           lineHeight: "1.5",
           ...props,
@@ -26,7 +26,7 @@ export const TextTranslate = ({ id, as, children, href = "", ...props }) => {
         return {
           ...defaultProps,
           fontWeight: "body",
-          fontSize: 6,
+          fontSize: [5, 6],
           fontFamily: "heading",
           lineHeight: "1.06",
           ...props,
@@ -35,7 +35,7 @@ export const TextTranslate = ({ id, as, children, href = "", ...props }) => {
         return {
           ...defaultProps,
           fontHeight: "28px",
-          fontSize: "32px",
+          fontSize: ["28px", "32px"],
           fontWeight: "body",
           letterSpacing: "0px",
           color: "blueNavy",

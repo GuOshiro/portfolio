@@ -1,7 +1,7 @@
 import React from "react"
 import { Box, Flex, Link, Text } from "rebass"
 // Components
-import Content, { WidthLimitation } from "@components/Content"
+import { WidthLimitation } from "@components/Content"
 
 export const Wrapper = ({ children }) => {
   return (
@@ -21,24 +21,6 @@ export const Wrapper = ({ children }) => {
       }}
     >
       <WidthLimitation flexDirection="column">{children}</WidthLimitation>
-    </Flex>
-  )
-}
-
-export const MessageWrapper = ({ children, ...props }) => {
-  return (
-    <Flex
-      height="100%"
-      justifyContent="center"
-      padding="90px 0"
-      textAlign="center"
-      sx={{
-        backgroundColor: "gray",
-        bottom: 0,
-        ...props,
-      }}
-    >
-      <Content flexDirection="column">{children}</Content>
     </Flex>
   )
 }

@@ -8,6 +8,14 @@
             "subtitle-2": "Tem algum projeto, ideia ou problema que queira ajuda?", 
             "subtitle-3": "Me mande um email" 
         }
+    },    
+    "footer": {
+        "chat": "Vamos Conversar",
+        "launchProjectNow": "Inicie um Projeto Agora!",
+        "letsMake": "Vamos contruir algo <span className='highlighter'>incrível<span> juntos",
+        "make": "Crie",
+        "meet": "Onde estou",
+        "whatDoYouNeedHelpWith": "Com o que precisa de ajuda?"
     }
 }
 

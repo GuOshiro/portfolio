@@ -7,5 +7,13 @@
             "subtitle-2": "Have a project, idea or problem you'd like to discuss?",   
             "subtitle-3": "Let's chat" 
         }
+    },
+    "footer": {
+        "chat": "Chat",
+        "launchProjectNow": "Launch Project now!",
+        "letsMake": "Let's make something great together",
+        "make": "Make",
+        "meet": "Meet",
+        "whatDoYouNeedHelpWith": "What do you need help with?"
     }
 }

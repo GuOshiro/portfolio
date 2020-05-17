@@ -1,25 +1,38 @@
 import React from "react"
+import { Flex } from "rebass"
 // Styles
-import {
-  FooterLineSection,
-  FooterSection,
-  FooterLink,
-  Address,
-  Wrapper,
-} from "./Footer.styles"
+import { FooterLineSection, FooterSection, Wrapper } from "./Footer.styles"
+// Component
+import TextTranslate from "@components/TextTranslate"
+// Constants
+import footerContent from "@constants/footer"
 
 const Footer = () => {
   return (
     <Wrapper>
       <FooterLineSection>
-        <FooterSection fontWeight="100"></FooterSection>
-        <FooterSection as="address">
-          <FooterLink fontWeight="100" href="mailto:gustavoaoshiro@gmail.com">
-            gustavoaoshiro@gmail.com
-          </FooterLink>
-          <FooterLink fontWeight="100" href="tel:+5511973701407"></FooterLink>
-          <Address fontWeight="100" mt={3}></Address>
-        </FooterSection>
+        {footerContent.description.map((footer, index) => (
+          <FooterSection key={index}>
+            <TextTranslate
+              as={footer.title.as}
+              color="white"
+              fontWeight="body"
+              id={footer.title.id}
+            />
+            <Flex flexDirection="column">
+              {footer.content.map((content, i) => (
+                <TextTranslate
+                  as={content.as}
+                  opacity="0.5"
+                  color="white"
+                  href={content.href}
+                  id={content.id}
+                  key={i}
+                />
+              ))}
+            </Flex>
+          </FooterSection>
+        ))}
       </FooterLineSection>
     </Wrapper>
   )

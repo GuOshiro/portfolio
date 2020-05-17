@@ -8,7 +8,7 @@ export const Section = ({ title, children, backgroundColor }) => (
   <Flex
     backgroundColor={backgroundColor}
     width="100vw"
-    sx={{ mt: ["0", "20%"] }}
+    sx={{ mt: ["0", "15%"] }}
   >
     <WidthLimitation marginY="5" marginX="auto">
       <Flex
