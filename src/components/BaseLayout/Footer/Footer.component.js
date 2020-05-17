@@ -10,11 +10,15 @@ import footerContent from "@constants/footer"
 const Footer = () => {
   return (
     <Wrapper>
-      <FooterLineSection textAlign="center" maxWidth="900px" m="100px auto 150px">
+      <FooterLineSection
+        textAlign="center"
+        maxWidth="900px"
+        m="100px auto 150px"
+        sx={{ fontSize: ["50px", "120px"] }}
+      >
         <TextTranslate
           as="h2"
           color="white"
-          fontSize="120px"
           fontWeight="light"
           id={footerContent.title}
           isHTML
