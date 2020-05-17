@@ -38,16 +38,13 @@ export const FooterSection = ({ children, name, ...props }) => {
   )
 }
 
-export const FooterLineSection = ({ children }) => {
+export const FooterLineSection = ({ children, ...props }) => {
   return (
     <Flex
       as="section"
       flexWrap="wrap"
       justifyContent="space-between"
       sx={{
-        "&:not(:last-child)": {
-          mb: 3,
-        },
         ".section": {
           width: ["100%", "100%", "20%"],
           "&:not(:last-child)": {
@@ -55,6 +52,7 @@ export const FooterLineSection = ({ children }) => {
             mb: 4,
           },
         },
+        ...props
       }}
     >
       {children}

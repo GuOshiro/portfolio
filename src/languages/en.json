@@ -1,10 +1,16 @@
 { 
+    "contact": {
+        "sayHello":"Say 'Hello'",
+        "yourEmail": "Your Email",
+        "yourMessage": "Your Message",
+        "yourName": "Your Name"
+    },
     "footer": {
         "address": "Av. Brg. Faria Lima, 3477 - Itaim Bibi, São Paulo - SP, 04538-133",
         "chat": "Chat",
         "email": "gustavoaoshiro@gmail.com",
         "launchProjectNow": "Launch Project now!",
-        "letsMake": "Let's make something great together",
+        "letsMake": "Let's make something <span class='highlighter'>great</span> together",
         "make": "Make",
         "meet": "Meet",
         "phone": "+5511973701407",

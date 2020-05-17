@@ -6,4 +6,10 @@ export default {
     subtitle2: { as: "h5", id: "home.cover.subtitle-2" },
     subtitle3: { as: "h5", id: "home.cover.subtitle-3" },
   },
+  contact: {
+    title: { as: "h2", id: "contact.sayHello" },
+    fieldEmail: { as: "span", id: "contact.yourEmail" },
+    fieldMessage: { as: "span", id: "contact.yourMessage" },
+    fieldName: { as: "span", id: "contact.yourName" },
+  }
 }

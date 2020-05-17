@@ -1,8 +1,16 @@
 import React from "react"
 import { Text } from "rebass"
-import { FormattedMessage } from "gatsby-plugin-intl"
+import { FormattedMessage, FormattedHTMLMessage } from "gatsby-plugin-intl"
 
-export const TextTranslate = ({ id, as, children, href, target, ...props }) => {
+export const TextTranslate = ({
+  as,
+  children,
+  href,
+  id,
+  isHTML = false,
+  target,
+  ...props
+}) => {
   const defaultProps = {
     color: "blueNavy",
     fontFamily: "heading",
@@ -29,6 +37,15 @@ export const TextTranslate = ({ id, as, children, href, target, ...props }) => {
           fontSize: [5, 6],
           fontFamily: "heading",
           lineHeight: "1.06",
+          span: {
+            span: {
+              highlighter: {
+                color: "orange",
+                // textShadow:
+                //   "3px 0px 3px orange, -3px 0px 3px orange, 6px 0px 6px orange, -6px 0px 6px orange",
+              },
+            },
+          },
           ...props,
         }
       case "h3":
@@ -94,7 +111,13 @@ export const TextTranslate = ({ id, as, children, href, target, ...props }) => {
 
   return (
     <Text as={as} href={href} target={target} sx={{ ...textProps() }}>
-      {children ? children : <FormattedMessage id={id} {...props} />}
+      {children ? (
+        children
+      ) : isHTML ? (
+        <FormattedHTMLMessage id={id} {...props} />
+      ) : (
+        <FormattedMessage id={id} {...props} />
+      )}
     </Text>
   )
 }
