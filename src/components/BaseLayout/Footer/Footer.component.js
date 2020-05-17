@@ -23,11 +23,12 @@ const Footer = () => {
               {footer.content.map((content, i) => (
                 <TextTranslate
                   as={content.as}
-                  opacity="0.5"
                   color="white"
                   href={content.href}
                   id={content.id}
                   key={i}
+                  opacity="0.5"
+                  target={content.target}
                 />
               ))}
             </Flex>

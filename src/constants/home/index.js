@@ -1,5 +1,3 @@
-export const menuItems = ["about", "portfolio", "blog", "contact"]
-
 export default {
   cover: {
     title1: { as: "h1", id: "home.cover.title-1" },

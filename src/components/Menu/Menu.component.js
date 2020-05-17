@@ -1,9 +1,9 @@
 import React from "react"
-import { Link } from "gatsby-plugin-intl"
+import { Link, useIntl } from "gatsby-plugin-intl"
 import { Button } from "rebass"
 import classNames from "classnames"
 // Constants
-import { menuItems } from "@constants/home"
+import menuItems from "@constants/menu"
 // Utils
 import { useToggleLocale } from "@utils/hooks/useToggleLocale"
 // Styles
@@ -13,19 +13,20 @@ import TextTranslate from "@components/TextTranslate"
 
 const Menu = ({ show }) => {
   const { toggleLocale } = useToggleLocale()
+  const { locale } = useIntl()
   return (
     <Wrapper className={classNames({ show })}>
       <MenuItemsWrapper>
-        {menuItems.map((item, index) => (
+        {menuItems.pages.map((item, index) => (
           <MenuItem key={index}>
-            <Link activeClassName="active" to={`/${item}`}>
-              <TextTranslate as="span" id={item} />
+            <Link activeClassName="active" to={`/${item.link}`}>
+              <TextTranslate as="span" id={item.id} />
             </Link>
           </MenuItem>
         ))}
         <MenuItem>
           <Button variant="link" onClick={() => toggleLocale()}>
-            <TextTranslate as="span" id="idioma" />
+            <TextTranslate as="span">{locale}</TextTranslate>
           </Button>
         </MenuItem>
       </MenuItemsWrapper>

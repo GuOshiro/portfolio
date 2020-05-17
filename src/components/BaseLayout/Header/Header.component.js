@@ -1,6 +1,4 @@
 import React, { useRef } from "react"
-import { Box, Button, Flex } from "rebass"
-import { Link, navigate } from "gatsby-plugin-intl"
 // Components
 import { WidthLimitation } from "@components/Content"
 import Menu from "@components/Menu"
@@ -17,7 +15,7 @@ const Header = () => {
 
   useOnClickOutside(headerRef, hideMenu)
 
-  const goToContact = () => navigate("/contact/")
+  // const goToContact = () => navigate("/contact/")
 
   return (
     <Wrapper ref={headerRef}>
@@ -26,7 +24,6 @@ const Header = () => {
         flexWrap="wrap"
         justifyContent="space-between"
       >
-        <Link to="/"></Link>
         <Menu />
         <MenuMobile show={showMobileMenu} toggle={toggleMobileMenu} />
       </WidthLimitation>

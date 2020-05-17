@@ -2,7 +2,7 @@ import React from "react"
 import { Text } from "rebass"
 import { FormattedMessage } from "gatsby-plugin-intl"
 
-export const TextTranslate = ({ id, as, children, href = "", ...props }) => {
+export const TextTranslate = ({ id, as, children, href, target, ...props }) => {
   const defaultProps = {
     color: "blueNavy",
     fontFamily: "heading",
@@ -93,7 +93,7 @@ export const TextTranslate = ({ id, as, children, href = "", ...props }) => {
   }
 
   return (
-    <Text as={as} href={href} sx={{ ...textProps() }}>
+    <Text as={as} href={href} target={target} sx={{ ...textProps() }}>
       {children ? children : <FormattedMessage id={id} {...props} />}
     </Text>
   )

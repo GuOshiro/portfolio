@@ -1,5 +1,17 @@
 
 {
+    "footer": {
+        "address": "Av. Brg. Faria Lima, 3477 - Itaim Bibi, São Paulo - SP, 04538-133",
+        "chat": "Vamos Conversar",
+        "email": "gustavoaoshiro@gmail.com",
+        "launchProjectNow": "Inicie um Projeto Agora!",
+        "letsMake": "Vamos contruir algo <span className='highlighter'>incrível<span> juntos",
+        "make": "Crie",
+        "meet": "Onde estou",
+        "phone": "+5511973701407",
+        "socialMidia": "Mídias Sociais",
+        "whatDoYouNeedHelpWith": "Com o que precisa de ajuda?"
+    },
     "home":{
         "cover":{
             "title-1": "Olá, sou desenvolvedor de software.",
@@ -8,14 +20,19 @@
             "subtitle-2": "Tem algum projeto, ideia ou problema que queira ajuda?", 
             "subtitle-3": "Me mande um email" 
         }
-    },    
-    "footer": {
-        "chat": "Vamos Conversar",
-        "launchProjectNow": "Inicie um Projeto Agora!",
-        "letsMake": "Vamos contruir algo <span className='highlighter'>incrível<span> juntos",
-        "make": "Crie",
-        "meet": "Onde estou",
-        "whatDoYouNeedHelpWith": "Com o que precisa de ajuda?"
+    },
+    "menu": {
+        "about": "Sobre",
+        "blog": "Blog",
+        "contact": "Contato",
+        "home": "Home",
+        "portfolio": "Portfólio"
+    },
+    "socialMidias": {
+        "facebook": "Facebook",
+        "github": "Github",
+        "instagram": "Instagram",
+        "linkedin": "Linkedin"
     }
 }
 

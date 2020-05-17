@@ -7,7 +7,7 @@ import Seo from "../components/Seo"
 function BlogPost({ data }) {
   const {
     markdownRemark: {
-      frontmatter: { title, date, description, category, image },
+      frontmatter: { title, date, description, category },
       html,
       timeToRead,
     },
