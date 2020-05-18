@@ -2,7 +2,8 @@ module.exports = {
   siteMetadata: {
     title: `GuOshiro`,
     description: `Free-lance Developr`,
-    author: `Gustavo de Albuquerque Oshiro`
+    author: `Gustavo de Albuquerque Oshiro`,
+    siteUrl: "http://guoshiro.github.io/portfolio"
   },
   plugins: [
     `gatsby-plugin-react-helmet`,

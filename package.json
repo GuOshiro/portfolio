@@ -3,6 +3,7 @@
   "description": "Guoshiro",
   "version": "0.1.0",
   "author": "Guoshiro",
+  "homepage": "http://guoshiro.github.io/portfolio",
   "dependencies": {
     "@rebass/forms": "^4.0.6",
     "@rebass/preset": "^4.0.5",
@@ -30,7 +31,10 @@
     "gatsby-source-filesystem": "^2.3.0",
     "gatsby-transformer-remark": "^2.8.8",
     "gatsby-transformer-sharp": "^2.5.0",
+    "gh-pages": "^2.2.0",
     "lazysizes": "^5.2.0",
+    "lodash.get": "^4.4.2",
+    "lodash.isempty": "^4.4.0",
     "netlify-cms-app": "^2.12.12",
     "prismjs": "^1.20.0",
     "prop-types": "^15.7.2",
@@ -60,14 +64,16 @@
   ],
   "license": "MIT",
   "scripts": {
-    "gen": "plop",
     "build": "gatsby build",
+    "clean": "gatsby clean",
     "develop": "gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
-    "start": "npm run clean && npm run develop",
+    "gen": "plop",
+    "predeploy": "npm run build",
     "serve": "gatsby serve",
-    "clean": "gatsby clean",
-    "test": "jest"
+    "start": "npm run clean && npm run develop",
+    "test": "jest",
+    "deploy": "gh-pages -d public"
   },
   "repository": {
     "type": "git",

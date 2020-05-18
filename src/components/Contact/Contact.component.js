@@ -4,7 +4,7 @@ import { Input, Label, Textarea } from "@rebass/forms"
 import Fade from "react-reveal/Fade"
 import { useFormik } from "formik"
 import emailjs from "emailjs-com"
-
+import isEmpty from "lodash.isempty"
 // Components
 import TextTranslate from "@components/TextTranslate"
 import Button from "@components/Button"
@@ -15,11 +15,15 @@ import { Form } from "./Contact.styles"
 
 const Contact = ({ contactContent }) => {
   const formatMessage = useTranslate()
-
   const sendEmail = async ({ errors, values, resetForm, isValid }) => {
     console.log(values)
     emailjs
-      .send("gmail-site", "contact_site", values, process.env.user_VzvI079uAR4rcxwRZmXLY)
+      .send(
+        "gmail-site",
+        "contact_site",
+        values,
+        process.env.user_VzvI079uAR4rcxwRZmXLY
+      )
       .then(
         function (response) {
           console.log("SUCCESS!", response.status, response.text)
@@ -31,7 +35,6 @@ const Contact = ({ contactContent }) => {
         }
       )
   }
-
   const {
     handleSubmit,
     errors,
@@ -47,7 +50,9 @@ const Contact = ({ contactContent }) => {
     },
     onSubmit: values => sendEmail({ errors, values, resetForm, isValid }),
   })
-
+  if (isEmpty(contactContent)) {
+    return null
+  }
   return (
     <Box width="100%">
       <Fade left>
