@@ -4,12 +4,8 @@ import { Link as IntlLink } from "gatsby-plugin-intl"
 import React from "react"
 import { Flex, Heading, Text } from "rebass"
 
-export const Section = ({ title, children, backgroundColor }) => (
-  <Flex
-    backgroundColor={backgroundColor}
-    width="100vw"
-    sx={{ mt: ["0", "15%"] }}
-  >
+export const Section = ({ title, children, backgroundColor, ...props }) => (
+  <Flex backgroundColor={backgroundColor} width="100vw" {...props}>
     <WidthLimitation marginY="5" marginX="auto">
       <Flex
         as="section"
