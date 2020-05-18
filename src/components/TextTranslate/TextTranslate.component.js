@@ -104,6 +104,12 @@ export const TextTranslate = ({
           letterSpacing: "0px",
           ...props,
         }
+      case "span":
+        return {
+          ...defaultProps,
+          letterSpacing: "0px",
+          ...props,
+        }
       default:
         return { ...defaultProps }
     }

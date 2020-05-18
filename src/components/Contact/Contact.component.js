@@ -1,8 +1,10 @@
 import React from "react"
 import { Box, Flex } from "rebass"
-import { Input, Label } from "@rebass/forms"
+import { Input, Label, Textarea } from "@rebass/forms"
+import Fade from "react-reveal/Fade"
 import { useFormik } from "formik"
-import { navigate } from "gatsby"
+import emailjs from "emailjs-com"
+
 // Components
 import TextTranslate from "@components/TextTranslate"
 import Button from "@components/Button"
@@ -13,62 +15,69 @@ import { Form } from "./Contact.styles"
 
 const Contact = ({ contactContent }) => {
   const formatMessage = useTranslate()
-  const sendToMautic = async data => {
-    await fetch("", {
-      method: "post",
-      body: JSON.stringify({
-        nome1: data.nome,
-        sobrenome: data.sobrenome,
-        empresa1: "",
-        email: data.email,
-        telefone: data.phone,
-      }),
 
-      headers: {
-        Accept: "application/json",
-        "Content-Type": "application/json",
-      },
-    })
-    navigate("/")
+  const sendEmail = async ({ errors, values, resetForm, isValid }) => {
+    console.log(values)
+    emailjs
+      .send("gmail-site", "contact_site", values, process.env.user_VzvI079uAR4rcxwRZmXLY)
+      .then(
+        function (response) {
+          console.log("SUCCESS!", response.status, response.text)
+          alert("Foi sucesso maluquete")
+          resetForm()
+        },
+        function (error) {
+          console.log("FAILED...", error)
+        }
+      )
   }
 
-  const { handleSubmit, handleChange, values } = useFormik({
-    onSubmit: sendToMautic,
+  const {
+    handleSubmit,
+    errors,
+    values,
+    handleChange,
+    resetForm,
+    isValid,
+  } = useFormik({
     initialValues: {
-      firstName: "",
-      lastName: "",
-      email: "",
-      phone: "",
+      from_name: "",
+      userEmail: "",
+      message: "",
     },
+    onSubmit: values => sendEmail({ errors, values, resetForm, isValid }),
   })
 
   return (
-    <Box>
-      <TextTranslate
-        as={contactContent.title.as}
-        fontWeight="body"
-        id={contactContent.title.id}
-        textTransform="uppercase"
-      />
+    <Box width="100%">
+      <Fade left>
+        <TextTranslate
+          as={contactContent.title.as}
+          fontWeight="body"
+          id={contactContent.title.id}
+          textTransform="uppercase"
+        />
+      </Fade>
       <Form onSubmit={handleSubmit}>
-        <Flex>
-          <Label>
-            <TextTranslate id={contactContent.fieldName.id} />
+        <Flex sx={{ flexDirection: ["column", "row"] }}>
+          <Label sx={{ mr: [0, 4] }}>
             <Input
-              id="firstName"
+              id="from_name"
+              name="from_name"
               required
-              value={values.firstName}
+              value={values.from_name}
               placeholder={formatMessage(`${contactContent.fieldName.id}`)}
               onChange={handleChange}
             />
           </Label>
 
           <Label>
-            <TextTranslate id={contactContent.fieldEmail.id} />
             <Input
-              id="email"
+              id="userEmail"
+              name="userEmail"
               required
-              value={values.lastName}
+              type="email"
+              value={values.userEmail}
               placeholder={formatMessage(`${contactContent.fieldEmail.id}`)}
               onChange={handleChange}
             />
@@ -76,18 +85,18 @@ const Contact = ({ contactContent }) => {
         </Flex>
 
         <Label>
-          <TextTranslate id={contactContent.fieldMessage.id} />
-          <Input
-            name="phone"
+          <Textarea
+            id="message"
+            name="message"
             required
-            value={values.phone}
+            value={values.message}
             placeholder={formatMessage(`${contactContent.fieldMessage.id}`)}
             onChange={handleChange}
           />
         </Label>
 
-        <Button mt={2} type="submit">
-          <TextTranslate id="contact.send" />
+        <Button variant="primary" mt="2" color="white" type="submit">
+          <TextTranslate as="span" color="white" id="contact.send" />
         </Button>
       </Form>
     </Box>

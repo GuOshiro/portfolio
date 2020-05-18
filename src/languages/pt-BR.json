@@ -1,6 +1,7 @@
 {
     "contact": {
         "sayHello":"Diga 'OLÁ'",
+        "send": "Enviar",
         "yourEmail": "Seu Email",
         "yourMessage": "Sua Mensagem",
         "yourName": "Seu Nome"

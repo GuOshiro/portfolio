@@ -1,6 +1,7 @@
 { 
     "contact": {
         "sayHello":"Say 'Hello'",
+        "send": "Enviar",
         "yourEmail": "Your Email",
         "yourMessage": "Your Message",
         "yourName": "Your Name"
