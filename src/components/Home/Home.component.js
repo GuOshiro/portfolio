@@ -14,7 +14,7 @@ const Home = () => {
         <Cover coverContent={homeContent.cover} />
       </Section>
       <Section>
-        <Contact />
+        <Contact contactContent={homeContent.contact} />
       </Section>
     </Fragment>
   )

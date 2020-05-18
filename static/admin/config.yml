@@ -33,10 +33,35 @@ collections:
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
       - { label: "Empresa", name: "company", widget: "string" }
-      - { label: "Descrição", name: "description", widget: "string" }
-      - { label: "Nome do Cliente", name: "clientName", widget: "string" }
-      - { label: "Cargo do Cliente", name: "clientPosition", widget: "string" }
-      - { label: "Imagem", name: "image", widget: "image" }
-      - { label: "Logo", name: "logo", widget: "image" }
-      - { label: "Cor Primaria", name: "primaryColor", widget: "string" }
-      - { label: "Cor Secundaria", name: "secondaryColor", widget: "string" }
+      - {
+          label: "Descrição",
+          required: false,
+          name: "description",
+          widget: "string",
+        }
+      - {
+          label: "Nome do Cliente",
+          required: false,
+          name: "clientName",
+          widget: "string",
+        }
+      - {
+          label: "Cargo do Cliente",
+          required: false,
+          name: "clientPosition",
+          widget: "string",
+        }
+      - { label: "Imagem", required: false, name: "image", widget: "image" }
+      - { label: "Logo", required: false, name: "logo", widget: "image" }
+      - {
+          label: "Cor Primaria",
+          required: false,
+          name: "primaryColor",
+          widget: "string",
+        }
+      - {
+          label: "Cor Secundaria",
+          required: false,
+          name: "secondaryColor",
+          widget: "string",
+        }

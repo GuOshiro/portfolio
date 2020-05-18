@@ -50,6 +50,7 @@ const Contact = ({ contactContent }) => {
     },
     onSubmit: values => sendEmail({ errors, values, resetForm, isValid }),
   })
+
   if (isEmpty(contactContent)) {
     return null
   }
