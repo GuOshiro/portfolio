@@ -56,55 +56,56 @@ const Contact = ({ contactContent }) => {
   }
   return (
     <Box width="100%">
-      <Fade left>
+      <Fade bottom>
         <TextTranslate
           as={contactContent.title.as}
-          fontWeight="body"
+          fontWeight="bold"
+          fontSize="100px"
           id={contactContent.title.id}
           textTransform="uppercase"
         />
-      </Fade>
-      <Form onSubmit={handleSubmit}>
-        <Flex sx={{ flexDirection: ["column", "row"] }}>
-          <Label sx={{ mr: [0, 4] }}>
-            <Input
-              id="from_name"
-              name="from_name"
-              required
-              value={values.from_name}
-              placeholder={formatMessage(`${contactContent.fieldName.id}`)}
-              onChange={handleChange}
-            />
-          </Label>
+        <Form onSubmit={handleSubmit}>
+          <Flex sx={{ flexDirection: ["column", "row"] }}>
+            <Label sx={{ mr: [0, 4] }}>
+              <Input
+                id="from_name"
+                name="from_name"
+                required
+                value={values.from_name}
+                placeholder={formatMessage(`${contactContent.fieldName.id}`)}
+                onChange={handleChange}
+              />
+            </Label>
+
+            <Label>
+              <Input
+                id="userEmail"
+                name="userEmail"
+                required
+                type="email"
+                value={values.userEmail}
+                placeholder={formatMessage(`${contactContent.fieldEmail.id}`)}
+                onChange={handleChange}
+              />
+            </Label>
+          </Flex>
 
           <Label>
-            <Input
-              id="userEmail"
-              name="userEmail"
+            <Textarea
+              id="message"
+              name="message"
               required
-              type="email"
-              value={values.userEmail}
-              placeholder={formatMessage(`${contactContent.fieldEmail.id}`)}
+              value={values.message}
+              placeholder={formatMessage(`${contactContent.fieldMessage.id}`)}
               onChange={handleChange}
             />
           </Label>
-        </Flex>
 
-        <Label>
-          <Textarea
-            id="message"
-            name="message"
-            required
-            value={values.message}
-            placeholder={formatMessage(`${contactContent.fieldMessage.id}`)}
-            onChange={handleChange}
-          />
-        </Label>
-
-        <Button variant="primary" mt="2" color="white" type="submit">
-          <TextTranslate as="span" color="white" id="contact.send" />
-        </Button>
-      </Form>
+          <Button variant="primary" mt="2" color="white" type="submit">
+            <TextTranslate as="span" color="white" id="contact.send" />
+          </Button>
+        </Form>
+      </Fade>
     </Box>
   )
 }

@@ -1,6 +1,5 @@
 import React from "react"
 import { Flex } from "rebass"
-import { MENU_HEIGHT } from "./Header/Header.styles"
 
 export const Wrapper = props => (
   <Flex
@@ -16,7 +15,6 @@ export const ContentWrapper = props => (
     justifyContent="center"
     alignItems="center"
     as="main"
-    marginTop={MENU_HEIGHT}
     {...props}
   />
 )

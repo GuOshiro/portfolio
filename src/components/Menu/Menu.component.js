@@ -26,7 +26,7 @@ const Menu = ({ show }) => {
         ))}
         <MenuItem>
           <Button variant="link" onClick={() => toggleLocale()}>
-            <TextTranslate as="span">{locale}</TextTranslate>
+            <TextTranslate as="span">{locale === 'en'? "Português": "English" }</TextTranslate>
           </Button>
         </MenuItem>
       </MenuItemsWrapper>
