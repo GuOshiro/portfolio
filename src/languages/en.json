@@ -34,6 +34,9 @@
         "home": "Home",
         "portfolio": "Portfolio"
     },
+    "portfolio": {
+        "portfolio": "Portfolio"
+    },
     "socialMidias": {
         "facebook": "Facebook",
         "github": "Github",

@@ -71,6 +71,7 @@ exports.createPages = ({ graphql, actions }) => {
       })
     })
   })
+  return Promise.all([createBlogPages(), createAllCategoryPages()])
 }
 
 exports.onCreateNode = ({ node, getNode, actions }) => {

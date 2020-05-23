@@ -10,17 +10,18 @@ export const Form = props => (
         mb: 3,
       },
       input: {
-        fontSize: 5,
-        mt: 4,
+        fontSize: [3, 5],
+        mt: [2, 4],
         border: "1px solid #0e0b5b",
         padding: "10px 20px",
       },
       textarea: {
         border: "1px solid #0e0b5b",
-        fontSize: 4,
+        fontSize: [2, 4],
         mt: 2,
         padding: "10px 20px",
-        resize: "none"
+        resize: "none",
+        minHeight: "200px",
       },
     }}
     {...props}
