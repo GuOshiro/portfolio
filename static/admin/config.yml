@@ -33,26 +33,14 @@ collections:
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
       - { label: "Empresa", name: "company", widget: "string" }
+      - { label: "URL", required: false, name: "urlProject", widget: "string" }
       - {
           label: "Descrição",
           required: false,
           name: "description",
           widget: "string",
         }
-      - {
-          label: "Nome do Cliente",
-          required: false,
-          name: "clientName",
-          widget: "string",
-        }
-      - {
-          label: "Cargo do Cliente",
-          required: false,
-          name: "clientPosition",
-          widget: "string",
-        }
       - { label: "Imagem", required: false, name: "image", widget: "image" }
-      - { label: "Logo", required: false, name: "logo", widget: "image" }
       - {
           label: "Cor Primaria",
           required: false,

@@ -21,9 +21,7 @@ const HomePortfolio = ({}) => {
           node {
             frontmatter {
               company
-              description
-              clientName
-              clientPosition
+              image
               description
               primaryColor
               secondaryColor
@@ -33,6 +31,8 @@ const HomePortfolio = ({}) => {
       }
     }
   `)
+
+  console.log(portfolios)
 
   return (
     <Wrapper>
