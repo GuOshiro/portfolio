@@ -2,22 +2,22 @@ import Content from "@components/Content"
 import Pagination from "@components/Pagination"
 import PostItem from "@components/PostItem"
 import React from "react"
-import * as Style from "./Blog.styles"
+import * as Style from "./Portfolio.styles"
 
-function getBlogPageUrl(pageNumber) {
+function getPortfolioPageUrl(pageNumber) {
   if (pageNumber === 1) {
-    return `/blog`
+    return `/portfolio`
   }
-  return `/blog/page/${pageNumber}`
+  return `/portfolio/page/${pageNumber}`
 }
 
-function Blog({ data, pageContext }) {
+function Portfolio({ data, pageContext }) {
   const postList = data.allMarkdownRemark.edges
   const { total, currentPage } = pageContext
   const isFirst = currentPage === 1
   const isLast = currentPage === total
-  const nextPage = getBlogPageUrl(currentPage + 1)
-  const prevPage = getBlogPageUrl(currentPage - 1)
+  const nextPage = getPortfolioPageUrl(currentPage + 1)
+  const prevPage = getPortfolioPageUrl(currentPage - 1)
 
   return (
     <Style.Wrapper>
@@ -27,7 +27,7 @@ function Blog({ data, pageContext }) {
             (
               {
                 node: {
-                  frontmatter: { category, date, description, title, image },
+                  frontmatter: { company, date, description, primaryColor, secondaryColor },
                   fields: { slug },
                   timeToRead,
                 },
@@ -36,13 +36,12 @@ function Blog({ data, pageContext }) {
             ) => (
               <PostItem
                 key={index}
-                slug={`/blog/${slug}`}
-                category={category}
+                slug={`/portfolio/${slug}`}
                 date={date}
                 timeToRead={timeToRead}
-                title={title}
+                title={company}
                 description={description}
-                // image={image}
+             
               />
             )
           )}
@@ -60,4 +59,4 @@ function Blog({ data, pageContext }) {
   )
 }
 
-export default Blog
+export default Portfolio

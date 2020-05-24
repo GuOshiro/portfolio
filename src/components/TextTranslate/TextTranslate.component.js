@@ -27,22 +27,20 @@ export const TextTranslate = ({
           fontWeight: "body",
           fontSize: [5, 6],
           fontFamily: "heading",
-          lineHeight: "1.5",
+          lineHeight: ["1.3", "1.5"],
           ...props,
         }
       case "h2":
         return {
           ...defaultProps,
           fontWeight: "body",
-          fontSize: [5, 6],
+          fontSize: [4, 6],
           fontFamily: "heading",
           lineHeight: "1.06",
           span: {
             span: {
               highlighter: {
                 color: "orange",
-                // textShadow:
-                //   "3px 0px 3px orange, -3px 0px 3px orange, 6px 0px 6px orange, -6px 0px 6px orange",
               },
             },
           },
@@ -71,9 +69,9 @@ export const TextTranslate = ({
       case "h5":
         return {
           ...defaultProps,
-          fontSize: "25px",
+          fontSize: ["20px", "25px"],
           fontWeight: "thin",
-          lineHeight: "2",
+          lineHeight: ["1.5", "2"],
           letterSpacing: "0px",
           color: "blueNavy",
           ...props,

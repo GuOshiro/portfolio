@@ -7,4 +7,8 @@ description: By using Vanilla to perform core estate planning functions for your
   Visualize wealth, family, and legacy planning together like never before.
 image: assets/img/vanilla.svg
 primaryColor: "#000"
+secondaryColor: "#fff"
+slug: /vanilla
+routes:
+  - /vanilla
 ---

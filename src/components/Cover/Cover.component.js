@@ -1,5 +1,5 @@
 import React from "react"
-import { Box, Flex } from "rebass"
+import { Box, Flex, Text } from "rebass"
 import Fade from "react-reveal/Fade"
 // Components
 import TextTranslate from "@components/TextTranslate"
@@ -32,12 +32,10 @@ const Cover = ({ coverContent }) => {
             as={coverContent.subtitle3.as}
             mr="2"
           />
-          <TextTranslate
-            as="a"
-            fontSize="30px"
-            href="mailto:gustavoaoshiro@gmail.com"
-          >
-            gustavoaoshiro@gmail.com
+          <TextTranslate as="a" href="mailto:gustavoaoshiro@gmail.com">
+            <Text sx={{ fontSize: ["22px", "30px"] }}>
+              gustavoaoshiro@gmail.com
+            </Text>
           </TextTranslate>
         </Flex>
       </Box>

@@ -6,4 +6,8 @@ description: Nash combines the security benefits of blockchain with the speed
   intuitive interface is second to none.
 image: assets/img/qd_hiztq.jpg
 primaryColor: "#0052f3"
+secondaryColor: "#fff"
+slug: /nash
+routes: 
+  - /nash
 ---

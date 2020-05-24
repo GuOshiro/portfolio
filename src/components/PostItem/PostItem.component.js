@@ -12,7 +12,7 @@ import { Title } from "@components/LatestPosts/LatestPosts.styles"
 
 const PostItem = ({ title, slug, category, image, date, height }) => {
   return (
-    <CardLink to={`/blog/${slug}`}>
+    <CardLink to={slug}>
       <Wrapper>
         {image && <PostImage height={height} image={image} />}
         <InfoWrapper>
