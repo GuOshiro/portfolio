@@ -13,22 +13,38 @@ export const CardPortfolio = ({
   slug,
   ...props
 }) => (
-  <Link to={`/portfolio/${slug}`}>
+  <Link
+    sx={{
+      textDecoration: "none",
+    }}
+    to={`/portfolio/${slug}`}
+  >
     <Card
       sx={{
         boxShadow: "none",
         cursor: "pointer",
         width: "350px",
+        height: "350px",
         transition: "box-shadow 100ms",
         zIndex: 1,
-        backgroundColor: primaryColor,
+        color: primaryColor,
+        textDecorationLine: "none",
+        backgroundColor: secondaryColor,
+        opacity: 0.9,
         ":hover": {
           boxShadow: "4px 10px 18px #0D0D361A",
           zIndex: 2,
         },
       }}
     >
-      <Heading as="h6">{company}</Heading>
+      <Heading
+        as="h6"
+        sx={{
+          textDecoration: "none",
+        }}
+      >
+        {company}
+      </Heading>
     </Card>
   </Link>
 )

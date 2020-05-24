@@ -16,7 +16,6 @@ const HomePortfolio = ({}) => {
     query portfolioQuery {
       portfolio: allMarkdownRemark(
         filter: { fileAbsolutePath: { glob: "**/api/portfolio/*.md" } }
-        limit: 3
       ) {
         edges {
           node {
