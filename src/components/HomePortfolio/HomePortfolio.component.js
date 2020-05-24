@@ -23,6 +23,7 @@ const HomePortfolio = ({}) => {
             frontmatter {
               company
               image
+              slug
               description
               primaryColor
               secondaryColor
@@ -44,7 +45,11 @@ const HomePortfolio = ({}) => {
           textTransform="uppercase"
         />
       </Fade>
-      <Flex>
+      <Flex
+        sx={{
+          flexWrap: "wrap",
+        }}
+      >
         {portfolioList.map((portfolio, index) => (
           <CardPortfolio
             company={portfolio.company}
@@ -53,6 +58,7 @@ const HomePortfolio = ({}) => {
             key={index}
             primaryColor={portfolio.primaryColor}
             secondaryColor={portfolio.secondaryColor}
+            slug={portfolio.slug}
           />
         ))}
       </Flex>
