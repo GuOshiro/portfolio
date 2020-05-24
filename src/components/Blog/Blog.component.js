@@ -42,7 +42,7 @@ function Blog({ data, pageContext }) {
                 timeToRead={timeToRead}
                 title={title}
                 description={description}
-                image={image}
+                // image={image}
               />
             )
           )}

@@ -24,6 +24,8 @@ collections:
           format: "YYYY-MM-DD hh:mm:ss",
         }
       - { label: "Imagem", name: "image", widget: "image" }
+      - { label: "Route", name: "routes", widget: "string" }
+      - { label: "Slug", name: "slug", widget: "string" }
       - { label: "Categoria", name: "category", widget: "string" }
       - { label: "Texto", name: "body", widget: "markdown" }
   - name: "portfolio"
@@ -41,6 +43,8 @@ collections:
           widget: "string",
         }
       - { label: "Imagem", required: false, name: "image", widget: "image" }
+      - { label: "Route", name: "routes", widget: "string" }
+      - { label: "Slug", name: "slug", widget: "string" }
       - {
           label: "Cor Primaria",
           required: false,

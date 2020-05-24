@@ -1,6 +1,8 @@
 ---
 title: Thanos, o Deus cristão
-description: Thanos poderia ser apenas mais um vilão das histórias em quadrinhos
+date: "2019-10-30 14:57:10"
+description: >-
+  Thanos poderia ser apenas mais um vilão das histórias em quadrinhos
   adaptado para o cinema que nos deixaria com medo e raiva. Poderia ser apenas
   mais um personagem que ilustra a maldade de um genocida ou mesmo um eugenista
   que mata de modo aleatório para que parte da população universal possa ainda
@@ -8,9 +10,11 @@ description: Thanos poderia ser apenas mais um vilão das histórias em quadrinh
   ao invés disso, nesse filme, me aterrorizei quando percebi que o vilão da liga
   de heróis que mais faz sucesso nos cinemas, era parecido ao Deus no qual é bom
   e inerrante.
-date: 2020-05-16 06:44:39
 image: assets/img/images-34773571750799854458..jpg
 category: Cristianismo
+slug: /thanos-deus
+routes:
+  - /thanos-deus
 ---
 Thanos poderia ser apenas mais um vilão das histórias em quadrinhos adaptado para o cinema que nos deixaria com medo e raiva. Poderia ser apenas mais um personagem que ilustra a maldade de um genocida ou mesmo um eugenista que mata de modo aleatório para que parte da população universal possa ainda sobreviver através de recursos limitados em que a própria terra pode dar. Mas ao invés disso, nesse filme, me aterrorizei quando percebi que o vilão da liga de heróis que mais faz sucesso nos cinemas, era parecido ao Deus no qual é bom e inerrante.
 
