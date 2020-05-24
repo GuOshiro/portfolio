@@ -41,7 +41,7 @@ exports.createPages = ({
       const posts = result.data.allMarkdownRemark.edges
       posts.forEach(({ node, next, previous }) => {
         createPage({
-          path: `${node.frontmatter.slug || node.fields.slug}`,
+          path: `/blog${node.frontmatter.slug || node.fields.slug}`,
           component: path.resolve("./src/templates/blog-post.js"),
           context: {
             slug: node.fields.slug,
@@ -104,8 +104,8 @@ exports.createPages = ({
       const cases = result.data.allMarkdownRemark.edges
       cases.forEach(({ node, next, previous }) => {
         createPage({
-          path: `${node.frontmatter.slug || node.fields.slug}`,
-          component: path.resolve("./src/templates/blog-post.js"),
+          path: `/portfolio${node.frontmatter.slug || node.fields.slug}`,
+          component: path.resolve("./src/templates/portfolio-item.js"),
           context: {
             slug: node.fields.slug,
             previousPost: previous,

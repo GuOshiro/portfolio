@@ -1,5 +1,5 @@
 import BaseLayout from "@components/BaseLayout"
-import Blog from "@components/Blog"
+import Portfolio from "@components/Portfolio"
 import Seo from "@components/Seo"
 import { useTranslate } from "@utils/hooks/useTranslate"
 import { graphql } from "gatsby"
@@ -9,8 +9,8 @@ function BlogList({ data, pageContext }) {
   const translate = useTranslate()
   return (
     <BaseLayout>
-      <Seo title={translate("menu.blog")} />
-      <Blog {...{ data, pageContext }} />
+      <Seo title={translate("menu.portfolio")} />
+      <Portfolio {...{ data, pageContext }} />
     </BaseLayout>
   )
 }
