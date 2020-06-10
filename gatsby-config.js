@@ -3,7 +3,7 @@ module.exports = {
     title: `GuOshiro`,
     description: `Free-lance Developr`,
     author: `Gustavo de Albuquerque Oshiro`,
-    siteUrl: "http://guoshiro.github.io/portfolio"
+    siteUrl: "http://guoshiro.github.io/portfolio",
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -105,7 +105,7 @@ module.exports = {
         background_color: "#00346B",
         theme_color: "#f17b36",
         display: `minimal-ui`,
-        },
+      },
     },
     {
       resolve: "gatsby-transformer-remark",
@@ -125,7 +125,9 @@ module.exports = {
             },
           },
           "gatsby-remark-lazy-load",
-          `gatsby-remark-prismjs`,
+          {
+            resolve: `gatsby-remark-highlight-code`,
+          },
         ],
       },
     },

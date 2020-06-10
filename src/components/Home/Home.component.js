@@ -11,14 +11,14 @@ import { Section } from "./Home.styles"
 const Home = () => {
   return (
     <Fragment>
-      <Section sx={{ mt: ["0", "10%"] }}>
+      <Section mt={["0", "10%"]}>
         <Cover coverContent={homeContent.cover} />
       </Section>
       <Section>
         <HomePortfolio />
       </Section>
       <Section>
-        <Contact contactContent={homeContent.contact} />
+        <Contact />
       </Section>
     </Fragment>
   )

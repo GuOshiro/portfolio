@@ -21,11 +21,17 @@ const HomePortfolio = ({}) => {
           node {
             frontmatter {
               company
-              image
               slug
               description
               primaryColor
               secondaryColor
+              image {
+                childImageSharp {
+                  fluid(maxWidth: 400) {
+                    ...GatsbyImageSharpFluid
+                  }
+                }
+              }
             }
           }
         }

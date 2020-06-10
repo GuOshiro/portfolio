@@ -1,10 +1,19 @@
 import BaseLayout from "@components/BaseLayout"
 import Post from "@components/Post"
 import { graphql } from "gatsby"
-import React from "react"
+import React, { useEffect } from "react"
 import Seo from "../components/Seo"
 
 function BlogPost({ data }) {
+  useEffect(async () => {
+    try {
+      const deckdeckgoLoader = require("@deckdeckgo/highlight-code/dist/loader")
+
+      await deckdeckgoLoader.defineCustomElements(window)
+    } catch (err) {
+      console.error(err)
+    }
+  })
   const {
     markdownRemark: {
       frontmatter: { title, date, description, category },
@@ -15,12 +24,7 @@ function BlogPost({ data }) {
 
   return (
     <BaseLayout>
-      <Seo
-        lang={"en"}
-        title={title}
-        description={description}
-        article
-      />
+      <Seo lang={"en"} title={title} description={description} article />
       <Post {...{ title, date, description, category, html, timeToRead }} />
     </BaseLayout>
   )

@@ -5,7 +5,7 @@ import React from "react"
 import { Flex, Heading, Text } from "rebass"
 
 export const Section = ({ title, children, backgroundColor, ...props }) => (
-  <Flex backgroundColor={backgroundColor} width="100vw" height="98vh" {...props}>
+  <Flex backgroundColor={backgroundColor} width="100vw" minHeight="98vh" {...props}>
     <WidthLimitation marginY="5" marginX="auto">
       <Flex
         as="section"

@@ -1,5 +1,6 @@
 import React from "react"
-import { Box, Card, Heading } from "rebass"
+import Img from "gatsby-image"
+import { Box, Card } from "rebass"
 import { Link } from "gatsby"
 
 export const Wrapper = props => <Box width="100%" {...props} />
@@ -11,7 +12,6 @@ export const CardPortfolio = ({
   primaryColor,
   secondaryColor,
   slug,
-  ...props
 }) => (
   <Link
     sx={{
@@ -23,28 +23,28 @@ export const CardPortfolio = ({
       sx={{
         boxShadow: "none",
         cursor: "pointer",
-        width: "350px",
-        height: "350px",
-        transition: "box-shadow 100ms",
+        width: "130px",
+        transition: "filter 200ms",
         zIndex: 1,
         color: primaryColor,
         textDecorationLine: "none",
         backgroundColor: secondaryColor,
         opacity: 0.9,
+        filter: "grayscale(1)",
         ":hover": {
-          boxShadow: "4px 10px 18px #0D0D361A",
+          filter: "grayscale(0)",
           zIndex: 2,
         },
       }}
     >
-      <Heading
-        as="h6"
-        sx={{
-          textDecoration: "none",
-        }}
-      >
-        {company}
-      </Heading>
+      {image && (
+        <Img
+          fluid={image.childImageSharp.fluid}
+          objectFit="cover"
+          objectPosition="50% 50%"
+          alt={company}
+        />
+      )}
     </Card>
   </Link>
 )

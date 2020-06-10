@@ -5,6 +5,8 @@ import Fade from "react-reveal/Fade"
 import { useFormik } from "formik"
 import emailjs from "emailjs-com"
 import isEmpty from "lodash.isempty"
+// Contents
+import contactContent from "@constants/contact"
 // Components
 import TextTranslate from "@components/TextTranslate"
 import Button from "@components/Button"
@@ -13,7 +15,7 @@ import { useTranslate } from "@utils/hooks/useTranslate"
 // Utils
 import { Form } from "./Contact.styles"
 
-const Contact = ({ contactContent }) => {
+const Contact = () => {
   const formatMessage = useTranslate()
   const sendEmail = async ({ errors, values, resetForm, isValid }) => {
     console.log(values)
@@ -35,6 +37,7 @@ const Contact = ({ contactContent }) => {
         }
       )
   }
+  
   const {
     handleSubmit,
     errors,
@@ -54,6 +57,7 @@ const Contact = ({ contactContent }) => {
   if (isEmpty(contactContent)) {
     return null
   }
+  
   return (
     <Box width="100%">
       <Fade bottom>

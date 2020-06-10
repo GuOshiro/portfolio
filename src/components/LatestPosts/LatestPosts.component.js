@@ -44,7 +44,7 @@ function LatestPosts() {
             timeToRead={node.timeToRead}
             title={node.frontmatter.title}
             description={node.frontmatter.description}
-            image={node.frontmatter.image}
+            // image={node.frontmatter.image}
           />
         ))}
       </Style.PostsGrid>
