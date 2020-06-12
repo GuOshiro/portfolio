@@ -7,18 +7,19 @@ export const Wrapper = props => <Box width="100%" {...props} />
 
 export const CardPortfolio = ({
   company,
-  description,
   image,
   primaryColor,
   secondaryColor,
   slug,
 }) => (
   <Link
-    sx={{
-      textDecoration: "none",
-    }}
     to={`/portfolio/${slug}`}
-  >
+    style={{
+      alignItems: "center",
+      display: "flex",
+      justifyContent: "center",
+      textDecoration: "none",
+    }}>
     <Card
       sx={{
         boxShadow: "none",

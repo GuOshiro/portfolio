@@ -8,6 +8,7 @@ import { Wrapper, CardPortfolio } from "./HomePortfolio.styles"
 import TextTranslate from "@components/TextTranslate"
 // Constant
 import PortfolioContent from "@constants/portfolio"
+import { Box } from "rebass"
 
 const HomePortfolio = ({}) => {
   const {
@@ -44,15 +45,18 @@ const HomePortfolio = ({}) => {
       <Fade bottom>
         <TextTranslate
           as="h2"
-          fontSize="100px"
+          fontSize={["3rem","100px"]}
           fontWeight="bold"
           id={PortfolioContent.title}
           textTransform="uppercase"
+          mb="50px"
         />
       </Fade>
-      <Flex
+      <Box
         sx={{
-          flexWrap: "wrap",
+          display: "grid",
+          gap: ["20px","30px"],
+          gridTemplateColumns: ["1fr 1fr", "1fr 1fr 1fr 1fr 1fr"],
         }}
       >
         {portfolioList.map((portfolio, index) => (
@@ -66,7 +70,7 @@ const HomePortfolio = ({}) => {
             slug={portfolio.slug}
           />
         ))}
-      </Flex>
+      </Box>
     </Wrapper>
   )
 }

@@ -37,7 +37,7 @@ const Contact = () => {
         }
       )
   }
-  
+
   const {
     handleSubmit,
     errors,
@@ -57,16 +57,17 @@ const Contact = () => {
   if (isEmpty(contactContent)) {
     return null
   }
-  
+
   return (
     <Box width="100%">
       <Fade bottom>
         <TextTranslate
           as={contactContent.title.as}
           fontWeight="bold"
-          fontSize="100px"
+          fontSize={["3rem", "100px"]}
           id={contactContent.title.id}
           textTransform="uppercase"
+          mb="50px"
         />
         <Form onSubmit={handleSubmit}>
           <Flex sx={{ flexDirection: ["column", "row"] }}>
