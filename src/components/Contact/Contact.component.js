@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 import { Box, Flex } from "rebass"
 import { Input, Label, Textarea } from "@rebass/forms"
 import Fade from "react-reveal/Fade"
@@ -14,26 +14,28 @@ import Button from "@components/Button"
 import { useTranslate } from "@utils/hooks/useTranslate"
 // Utils
 import { Form } from "./Contact.styles"
+import Loading from "@components/BaseLayout/Loading"
 
 const Contact = () => {
+  const [loadIsVisible, setLoadVisible] = useState(false)
   const formatMessage = useTranslate()
   const sendEmail = async ({ errors, values, resetForm, isValid }) => {
-    console.log(values)
+    setLoadVisible(true)
     emailjs
       .send(
         "gmail-site",
         "contact_site",
         values,
-        process.env.user_VzvI079uAR4rcxwRZmXLY
+        process.env.GATSBY_EMAIL_USER_ID
       )
       .then(
         function (response) {
-          console.log("SUCCESS!", response.status, response.text)
-          alert("Foi sucesso maluquete")
+          setLoadVisible(false)
           resetForm()
         },
         function (error) {
-          console.log("FAILED...", error)
+          alert("FAILED...", error)
+          setLoadVisible(false)
         }
       )
   }
@@ -60,6 +62,7 @@ const Contact = () => {
 
   return (
     <Box width="100%">
+      <Loading isVisible={loadIsVisible} />
       <Fade bottom>
         <TextTranslate
           as={contactContent.title.as}
