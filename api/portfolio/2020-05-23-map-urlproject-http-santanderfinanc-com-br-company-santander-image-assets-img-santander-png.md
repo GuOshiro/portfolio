@@ -1,10 +1,10 @@
 ---
 company: Santander
 urlProject: http://santanderfinanc.com.br/
-image: "../../static/assets/img/santander.png"
-primaryColor: "#eb1229"
-secondaryColor: "#fff"
-slug: /santander
+image: assets/img/santander.png
 routes:
   - /santander
+slug: /santander
+primaryColor: "#eb1229"
+secondaryColor: "#fff"
 ---
