@@ -1,10 +1,10 @@
 ---
-company: Bureau Veritas
+company: Sistema Pri
 urlProject: https://infra.bureauveritas.com.br/
-image: "../../static/assets/img/bureauveritas.png"
-primaryColor: "#eb1229"
-secondaryColor: "#fff"
-slug: /bureau-veritas
+image: assets/img/sistemapri.png
 routes:
   - /bureau-veritas
+slug: /sistema-pri
+primaryColor: "#eb1229"
+secondaryColor: "#fff"
 ---
