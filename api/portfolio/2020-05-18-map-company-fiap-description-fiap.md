@@ -1,10 +1,11 @@
 ---
 company: Fiap
+urlProject: https://www.fiap.com.br/
 description: Fiap
-image: "../../static/assets/img/fiap.png"
-primaryColor: '#ea1d5c'
-secondaryColor: "#fff"
+image: assets/img/fiap.png
+routes:
+  - /fiap
 slug: /fiap
-routes: 
-    - /fiap
+primaryColor: "#ea1d5c"
+secondaryColor: "#fff"
 ---
