@@ -1,11 +1,11 @@
 import React from "react"
-import { Box, Flex } from "rebass"
+import { Box, Flex, Heading } from "rebass"
 
 export const Wrapper = ({ children, className }) => {
   return (
     <Box
       sx={{
-        ml: [0, 0, 5],
+        ml: [0, 0, 0],
         flex: 1,
         "&.is-mobile": {
           display: "inline",
@@ -21,7 +21,7 @@ export const Wrapper = ({ children, className }) => {
         as="nav"
         color="white"
         alignItems="center"
-        justifyContent={"flex-end"}
+        justifyContent="flex-end"
       >
         {children}
       </Flex>
@@ -34,13 +34,28 @@ export const MenuItemsWrapper = ({ children }) => (
     width="100%"
     as="ul"
     sx={{
+      alignItems: "center",
+      display: "flex",
       whiteSpace: "nowrap",
       overflow: "hidden",
       textOverflow: "ellipsis",
+      flexDirection: ["column", "column", "row"],
     }}
   >
     {children}
   </Box>
+)
+
+export const MenuLogo = ({ ...props }) => (
+  <Heading
+    as="h1"
+    display="inline"
+    color="blueNavy"
+    sx={{
+      fontFamily: "'Press Start 2P',sans-serif",
+    }}
+    {...props}
+  />
 )
 
 export const MenuItem = ({ children }) => (

@@ -1,7 +1,6 @@
 import React from "react"
 import Img from "gatsby-image"
 import { Box, Card } from "rebass"
-import { Link } from "gatsby"
 
 export const Wrapper = props => <Box width="100%" {...props} />
 
@@ -10,16 +9,18 @@ export const CardPortfolio = ({
   image,
   primaryColor,
   secondaryColor,
-  slug,
+  urlProject,
 }) => (
-  <Link
-    to={`/portfolio/${slug}`}
+  <a
+    href={urlProject}
+    target="_blank"
     style={{
       alignItems: "center",
       display: "flex",
       justifyContent: "center",
       textDecoration: "none",
-    }}>
+    }}
+  >
     <Card
       sx={{
         boxShadow: "none",
@@ -47,5 +48,5 @@ export const CardPortfolio = ({
         />
       )}
     </Card>
-  </Link>
+  </a>
 )

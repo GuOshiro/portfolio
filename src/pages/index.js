@@ -8,7 +8,7 @@ import SEO from "@components/Seo"
 const IndexPage = ({ location }) => {
   return (
     <BaseLayout>
-      <SEO title="Home" />
+      <SEO title="GuOshiro" />
       <Home />
     </BaseLayout>
   )

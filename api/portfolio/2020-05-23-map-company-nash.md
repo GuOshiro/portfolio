@@ -7,6 +7,7 @@ description: Nash combines the security benefits of blockchain with the speed
 image: "../../static/assets/img/nash.png"
 primaryColor: "#0052f3"
 secondaryColor: "#fff"
+urlProject: https://app.nash.io/
 slug: /nash
 routes: 
   - /nash

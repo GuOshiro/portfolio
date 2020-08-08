@@ -26,6 +26,7 @@ const HomePortfolio = ({}) => {
               description
               primaryColor
               secondaryColor
+              urlProject
               image {
                 childImageSharp {
                   fluid(maxWidth: 400) {
@@ -67,7 +68,7 @@ const HomePortfolio = ({}) => {
             key={index}
             primaryColor={portfolio.primaryColor}
             secondaryColor={portfolio.secondaryColor}
-            slug={portfolio.slug}
+            urlProject={portfolio.urlProject}
           />
         ))}
       </Box>

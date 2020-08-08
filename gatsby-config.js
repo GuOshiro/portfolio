@@ -63,6 +63,10 @@ module.exports = {
             family: "Lato",
             variants: ["100", "400", "700"],
           },
+          {
+            family: "Press Start 2P",
+            variants: ["400"],
+          },
         ],
       },
     },
